@@ -167,7 +167,16 @@
                                 <a href="/sinh-vien-tieu-bieu"><span class="menu-title">Học sinh - Sinh viên tiêu biểu</span></a>
                             </li>
                             <li class="havechild">
-                                <a href="/danh-muc-nghe"><span class="menu-title">Nghề Đào Tạo</span></a>
+                                <a href="/danh-muc-nghe"><span class="menu-title">Nghề đào tạo</span></a>
+                                <ul>
+                                    @foreach (var item in MvcApplication.lstNgheDaoTao)
+                                    {
+
+                                        <li class="havechild">
+                                            <a href="/danh-muc-nghe/@item.NgheLink-@item.ID"><span class="menu-title">@item.TenNghe</span></a>
+                                        </li>
+                                    }
+                                </ul>
                             </li>
                             <li class="havechild">
                                 <a href="/dang-ky"><span class="menu-title">Đăng ký xét tuyển trực tuyến</span></a>
@@ -342,7 +351,16 @@
                     <a href="/sinh-vien-tieu-bieu"><span class="menu-title">Học sinh - Sinh viên tiêu biểu</span></a>
                 </li>
                 <li class="havechild">
-                    <a href="/danh-muc-nghe"><span class="menu-title">Nghề Đào Tạo</span></a>
+                    <a href="/danh-muc-nghe"><span class="menu-title">Nghề đào tạo</span></a>
+                    <ul>
+                        @foreach (var item in MvcApplication.lstNgheDaoTao)
+                        {
+
+                            <li class="havechild">
+                                <a href="/danh-muc-nghe/@item.NgheLink-@item.ID"><span class="menu-title">@item.TenNghe</span></a>
+                            </li>
+                        }
+                    </ul>
                 </li>
                 <li class="havechild">
                     <a href="/dang-ky"><span class="menu-title">Đăng ký xét tuyển trực tuyến</span></a>
